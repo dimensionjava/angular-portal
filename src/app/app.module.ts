@@ -9,6 +9,8 @@ import { HeaderComponent } from './layout/components/header/header.component';
 import { FooterComponent } from './layout/components/footer/footer.component';
 import { SkeletonComponent } from './layout/components/skeleton/skeleton.component';
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
+import { HomeModule } from './modules/home/home.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NavbarComponent } from './layout/components/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    HomeModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

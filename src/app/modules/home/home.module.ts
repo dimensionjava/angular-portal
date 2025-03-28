@@ -16,6 +16,11 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    HomePageComponent,
+    FeaturedProductComponent,
+    CompanyInfoComponent
   ]
 })
 export class HomeModule { }

@@ -20,6 +20,10 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CommonModule,
+    ProductsListComponent
   ]
 })
 export class ProductsModule { }
