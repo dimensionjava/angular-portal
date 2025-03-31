@@ -13,6 +13,7 @@ import { MainLayoutComponent } from './layout/components/main-layout/main-layout
 
 import { HomeModule } from './modules/home/home.module';
 import { ProductsModule } from './modules/products/products.module';
+import { ContactModule } from './modules/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductsModule } from './modules/products/products.module';
     CoreModule,
     SharedModule,
     HomeModule,
-    ProductsModule
+    ProductsModule,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]

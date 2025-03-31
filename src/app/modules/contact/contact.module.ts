@@ -14,6 +14,9 @@ import { ContactPageComponent } from './page/contact-page/contact-page.component
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [
+    ContactPageComponent
+  ],
 })
 export class ContactModule { }
