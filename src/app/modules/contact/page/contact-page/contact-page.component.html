@@ -1,11 +1,17 @@
-<div
-  style="width: 100%; height: 100px; background-color: #3498db; color: white; display:
-  flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-  <div style="font-size: 2rem; font-weight: bold;">CONTACTO - SEGURIDAD INDUSTRIAL</div>
+<!-- Título de la sección -->
+<div class="contact-banner">
+  <h1 class="contact-title">CONTACTO</h1>
 </div>
 
-<div class="contact-container">
-  <app-contact-info></app-contact-info>
-  <app-contact-form></app-contact-form>
+<!-- Contenedor principal de contacto -->
+<div class="row g-4">
+  <!-- Sección de Información de Contacto (Izquierda) -->
+  <div class="col-md-5">
+    <app-contact-info></app-contact-info>
+  </div>
 
+  <!-- Sección de Formulario (Derecha) -->
+  <div class="col-md-7">
+    <app-contact-form></app-contact-form>
+  </div>
 </div>

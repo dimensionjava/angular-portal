@@ -1,33 +1,52 @@
-<div class="form-section">
-  <h2>Formulario</h2>
+<div class="form-container">
+  <h2 class="form-title">Formulario de Contacto</h2>
 
-  <div class="form-field">
-      <label>Nombres</label>
-      <input type="text" placeholder="Nombres">
-  </div>
-
-  <div class="form-field">
-      <label>Apellidos</label>
-      <input type="text" placeholder="Apellidos">
-  </div>
-
-  <div class="form-field">
-      <label>Email</label>
-      <input type="email" placeholder="Email">
-  </div>
-
-  <div class="form-field">
-      <label>Tipo de Servicio</label>
-      <div class="select-container">
-          <select>
-              <option value="" disabled selected>Select</option>
-              <option value="equipos">Equipos de Protección</option>
-              <option value="asesoria">Asesoría Técnica</option>
-              <option value="capacitacion">Capacitación</option>
-          </select>
-          <span>✔️</span>
+  <form>
+      <div class="row">
+          <div class="col-md-6 mb-3">
+              <label for="nombres" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="nombres" placeholder="Ingresa tus nombres">
+          </div>
+          <div class="col-md-6 mb-3">
+              <label for="apellidos" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos">
+          </div>
       </div>
-  </div>
 
-  <button type="submit" class="submit-btn">Enviar</button>
+      <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+      </div>
+
+      <div class="row">
+          <div class="col-md-6 mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" placeholder="Teléfono de contacto">
+          </div>
+          <div class="col-md-6 mb-3">
+              <label for="servicio" class="form-label">Tipo de Servicio</label>
+              <select class="form-select" id="servicio">
+                  <option selected>Selecciona una opción</option>
+                  <option value="equipos">Equipos de Protección</option>
+                  <option value="asesoria">Asesoría Técnica</option>
+                  <option value="capacitacion">Capacitación</option>
+                  <option value="otro">Otro</option>
+              </select>
+          </div>
+      </div>
+
+      <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="4" placeholder="¿Cómo podemos ayudarte?"></textarea>
+      </div>
+
+      <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="terminos">
+          <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-send">
+          <i class="fas fa-paper-plane"></i> Enviar mensaje
+      </button>
+  </form>
 </div>
