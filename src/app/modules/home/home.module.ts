@@ -4,6 +4,7 @@ import { CompanyInfoComponent } from './components/company-info/company-info.com
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeroSliderComponent } from './components/hero-slider/hero-slider.component';
 import { FeaturedProductsComponent } from './components/featured-products/featured-products.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FeaturedProductsComponent } from './components/featured-products/featur
     HomePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports:[
     HomePageComponent

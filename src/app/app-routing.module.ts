@@ -5,7 +5,8 @@ import { ProductCatalogComponent } from './modules/products/pages/product-catalo
 import { ContactPageComponent } from './modules/contact/page/contact-page/contact-page.component';
 
 const routes: Routes = [
-  {path: '',component: HomePageComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: 'home',component: HomePageComponent},
   {path: 'product',component: ProductCatalogComponent},
   {path: 'contact',component: ContactPageComponent},
 ];
