@@ -1,6 +1,29 @@
+
+<!-- <div>
+  <p> {{products}}</p>
+</div> -->
+
+
 <div class="row">
   <!-- Card 1 -->
-  <div class="col-md-4 mb-4">
+  <div class="col-md-4 mb-4" *ngFor="let item of products.products" >
+    <p></p>
+    <div class="card product-card">
+      <img src="{{item.images}}" class="card-img-top product-img" alt="Casco de seguridad">
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.description}}</p>
+        <div class="price-tag">{{item.price}}</div>
+        <a href="#" class="btn btn-primary mt-2">Añadir al carrito</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Card 1 -->
+<!--   <div class="col-md-4 mb-4">
     <div class="card product-card">
       <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500" class="card-img-top product-img" alt="Casco de seguridad">
       <div class="card-body">
@@ -11,69 +34,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Card 2 -->
-  <div class="col-md-4 mb-4">
-    <div class="card product-card">
-      <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?w=500" class="card-img-top product-img" alt="Guantes de protección">
-      <div class="card-body">
-        <h5 class="card-title">Guantes Industriales</h5>
-        <p class="card-text">Protección para manos contra cortes y químicos.</p>
-        <div class="price-tag">S/ 45.50</div>
-        <a href="#" class="btn btn-primary mt-2">Añadir al carrito</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="col-md-4 mb-4">
-    <div class="card product-card">
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500" class="card-img-top product-img" alt="Calzado de seguridad">
-      <div class="card-body">
-        <h5 class="card-title">Botas de Seguridad</h5>
-        <p class="card-text">Con punta de acero y suela anti-deslizante.</p>
-        <div class="price-tag">S/ 120.00</div>
-        <a href="#" class="btn btn-primary mt-2">Añadir al carrito</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="col-md-4 mb-4">
-    <div class="card product-card">
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500" class="card-img-top product-img" alt="Arnés de seguridad">
-      <div class="card-body">
-        <h5 class="card-title">Arnés de Seguridad</h5>
-        <p class="card-text">Para trabajos en altura con certificación internacional.</p>
-        <div class="price-tag">S/ 189.90</div>
-        <a href="#" class="btn btn-primary mt-2">Añadir al carrito</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 5 -->
-  <div class="col-md-4 mb-4">
-    <div class="card product-card">
-      <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=500" class="card-img-top product-img" alt="Gafas de protección">
-      <div class="card-body">
-        <h5 class="card-title">Gafas Protectoras</h5>
-        <p class="card-text">Protección ocular contra partículas y líquidos.</p>
-        <div class="price-tag">S/ 35.00</div>
-        <a href="#" class="btn btn-primary mt-2">Añadir al carrito</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 6 -->
-  <div class="col-md-4 mb-4">
-    <div class="card product-card">
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500" class="card-img-top product-img" alt="Protector auditivo">
-      <div class="card-body">
-        <h5 class="card-title">Protectores Auditivos</h5>
-        <p class="card-text">Reducción de ruido para ambientes industriales.</p>
-        <div class="price-tag">S/ 28.50</div>
-        <a href="#" class="btn btn-primary mt-2">Añadir al carrito</a>
-      </div>
-    </div>
-  </div>
-</div>
+</div>  -->

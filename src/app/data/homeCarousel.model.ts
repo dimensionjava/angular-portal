@@ -1,5 +1,4 @@
-export interface Product {
-  id: string;
+export interface HomeCarousel {
   imageUrl: string;
   title: string;
   description: string;

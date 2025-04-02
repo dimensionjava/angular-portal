@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../../data/product.model';
+import { HomeProduct } from '../../../../data/homeProduct.model';
 import { HomeService } from '../../services/home.service';
+import { HomeCarousel } from '../../../../data/homeCarousel.model';
+import { HomeInfo } from '../../../../data/homeInfo.model';
 
 
 @Component({
@@ -9,7 +11,9 @@ import { HomeService } from '../../services/home.service';
   styleUrl: './featured-products.component.css'
 })
 export class FeaturedProductsComponent implements OnInit  {
-  products: Product[] = [];
+  homeProduct: HomeProduct[] = [];
+  homeCarousel: HomeCarousel[] = [];
+  homeInfo: HomeInfo[] = [];
 
   constructor(private homeService: HomeService) {}
 
@@ -20,7 +24,7 @@ export class FeaturedProductsComponent implements OnInit  {
   private loadFeaturedProducts(): void {
     this.homeService.getFeaturedProducts().subscribe({
       next: (resp) => {
-        this.products = resp;
+        this.homeProduct = resp;
       },
       error: (err) => {
         console.error('Error al cargar productos:', err);
@@ -28,6 +32,10 @@ export class FeaturedProductsComponent implements OnInit  {
       }
     });
   }
+
+
+
+
 
 
 
