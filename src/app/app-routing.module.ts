@@ -7,8 +7,14 @@ import { ContactPageComponent } from './modules/contact/page/contact-page/contac
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'home',component: HomePageComponent},
-  {path: 'product',component: ProductCatalogComponent},
+  // {path: 'product',component: ProductCatalogComponent},
   {path: 'contact',component: ContactPageComponent},
+
+  {
+    path: 'product',
+    loadChildren: ()=> import ('./modules/products/products.module')
+    .then(m=> m.ProductsModule)
+  },
 ];
 
 @NgModule({

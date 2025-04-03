@@ -6,6 +6,9 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { ProductGridItemComponent } from './components/product-grid-item/product-grid-item.component';
 import { ProductCatalogComponent } from './pages/product-catalog/product-catalog.component';
 import { ProductInfoCardComponent } from './components/product-info-card/product-info-card.component';
+import { HerramientaComponent } from './components/herramienta/herramienta.component';
+import { CalzadoComponent } from './components/calzado/calzado.component';
+import { ProductsRoutingModule } from './products-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,10 +17,13 @@ import { ProductInfoCardComponent } from './components/product-info-card/product
     ProductCatalogComponent,
     ProductInfoCardComponent,
     ProductDetailBasketComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HerramientaComponent,
+    CalzadoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductsRoutingModule
   ],
   exports: [
     CommonModule,
