@@ -14,6 +14,10 @@ import { MainLayoutComponent } from './layout/components/main-layout/main-layout
 import { HomeModule } from './modules/home/home.module';
 import { ProductsModule } from './modules/products/products.module';
 import { ContactModule } from './modules/contact/contact.module';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { ContactModule } from './modules/contact/contact.module';
     PromotionBarComponent,
     MainNavComponent,
     MainLayoutComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,11 @@ import { ContactModule } from './modules/contact/contact.module';
     SharedModule,
     HomeModule,
     ProductsModule,
-    ContactModule
+    ContactModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
