@@ -15,6 +15,7 @@ import { HomeModule } from './modules/home/home.module';
 import { ProductsModule } from './modules/products/products.module';
 import { ContactModule } from './modules/contact/contact.module';
 import { LoginComponent } from './login/login.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -26,7 +27,7 @@ import { CommonModule } from '@angular/common';
     MainNavComponent,
     MainLayoutComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent // Agregamos el componente de login
   ],
   imports: [
     BrowserModule,
@@ -36,10 +37,10 @@ import { CommonModule } from '@angular/common';
     HomeModule,
     ProductsModule,
     ContactModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    CommonModule,
-    FormsModule
+    HttpClientModule, // Necesario para las peticiones HTTP de autenticación
+    ReactiveFormsModule, // Para el formulario de login
+    CommonModule,   //todo: es necesario importalo?
+    FormsModule // Para el formulario de login con ngModel
   ],
   providers: [],
   bootstrap: [AppComponent]

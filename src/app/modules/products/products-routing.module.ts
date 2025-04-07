@@ -1,36 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductCatalogComponent } from './pages/product-catalog/product-catalog.component';
-import { HerramientaComponent } from './components/herramienta/herramienta.component';
-import { CalzadoComponent } from './components/calzado/calzado.component';
-import { ProductGridItemComponent } from './components/product-grid-item/product-grid-item.component';
 
-const routes: Routes = [
+import { ProductCatalogComponent } from './pages/product-catalog/product-catalog.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductGridItemComponent } from './components/product-grid-item/product-grid-item.component';
+import { ProductCalzadoComponent } from './components/product-calzado/product-calzado.component';
+import { ProductVestimentaComponent } from './components/product-vestimenta/product-vestimenta.component';
+
+// Definimos las rutas para el módulo de productos
+export const productRoutes: Routes = [
   {
-    path: '',
+    path: '', // Ruta vacía porque se concatenará con la ruta base en app-routing
     component: ProductCatalogComponent,
     children: [
-      {
-        path: 'herramienta',
-        component: HerramientaComponent
-      },
-      {
-        path: "calzado",
-        component: CalzadoComponent
-      },
-      {
-        path: "producto",
-        component: ProductGridItemComponent
-      }
+      { path: '', component: ProductGridItemComponent }, // Ruta por defecto muestra todos los productos
+      { path: 'calzado', component: ProductCalzadoComponent },
+      { path: 'vestimenta', component: ProductVestimentaComponent }
     ]
-
-  }
-
-
+  },
+  { path: ':id', component: ProductDetailComponent } // Ruta para detalles de producto individual
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(productRoutes)],
   exports: [RouterModule]
 })
 export class ProductsRoutingModule { }

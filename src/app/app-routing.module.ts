@@ -1,31 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './modules/home/pages/home-page/home-page.component';
-import { ProductCatalogComponent } from './modules/products/pages/product-catalog/product-catalog.component';
 import { ContactPageComponent } from './modules/contact/page/contact-page/contact-page.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guard/auth.guard';
+// Importamos las rutas desde el modulo de productos
+import { productRoutes } from './modules/products/products-routing.module';
 
 const routes: Routes = [
-
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  {path: 'login',component: LoginComponent},
-
-  {path: 'home',
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirige a login inicialmente
+  { path: 'login', component: LoginComponent }, // Ruta para el login
+  {
+    path: 'home',
     component: HomePageComponent,
-    canActivate: [AuthGuard]},
-  // {path: 'product',component: ProductCatalogComponent},
-  {path: 'contact',
-    component: ContactPageComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard] // Protegemos con AuthGuard
   },
-
   {
     path: 'product',
-    loadChildren: ()=> import ('./modules/products/products.module')
-    .then(m=> m.ProductsModule),
-    canActivate: [AuthGuard]
-
+    children: productRoutes, // Incluimos las rutas del módulo de productos
+    canActivate: [AuthGuard] // Protegemos con AuthGuard
+  },
+  {
+    path: 'contact',
+    component: ContactPageComponent,
+    canActivate: [AuthGuard] // Protegemos con AuthGuard
   },
 ];
 
